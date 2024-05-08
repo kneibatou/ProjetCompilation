@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #76C9AF;
+
+}
+h1{
+    font-size: 60px;
+    margin-right: 20px;
+    color: #4faa8e;
+}
+
+header {
+    background-color: #ffffff ;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #101010;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-link {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 80vh; 
+        
+}
+
+    
+
+
+.box {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+/* jabt 3mrii */
+.password-container {
+    font-size: small; 
+    white-space: nowrap; 
+    margin: 0; 
+}
+.password-container input[type="checkbox"] {
+    margin: 0;
+    padding: 1;
+    vertical-align: middle;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.password-container input[type="checkbox"]:checked {
+    background-color: #76C9AF;
+}
+
+
+.password-container span {
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;  
+}
+
+button[type="submit"] {
+    background-color: #76C9AF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #4ca68a;
+}
+.back{
+    background-color: #76C9AF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back:hover {
+    background-color: #4ca68a;
+}
+
+.forcecenter {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 80vh; 
+    text-align: center;    
+}
+

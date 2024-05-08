@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Inscription</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/showhidden.js"></script>
+    <link rel="stylesheet" href="sweetalter2/package/dist/sweetalert2.css">
+    <script src="sweetalter2/package/dist/sweetalert2.all.js"></script>
+    <script src="sweetalter2/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href='http://localhost/ISCAE/INSUCRIPTION/frontend/index.html'><b>Accueil</b></a></li>
+                <li><a href='http://localhost/ISCAE/INSUCRIPTION/backend/formul.html'><b>Inscription</b></a></li>
+                <li><a href="#"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <span>Suivez-nous sur  .</span>
+            <a href="https://www.instagram.com/" class="social-link"><img src="img/INSTA.png" alt="Image de formation en ligne" width="30PX"></a>
+            <a href="https://www.facebook.com/" class="social-link"><img src="img/FB.png" alt="Image de formation en ligne" width="30PX"></a>
+        </div>
+    </header>
+    <main class="container">
+        <div class="box">
+            <form action="traitement.php" method="POST">
+                <div class="form-group" >
+                    <label for="NNI">NNI :</label>
+                    <input type="text" id="NNI" name="NNI" pattern="[1-9]\d{9}" title="Le NNI doit contenir exactement 10 chiffres et ne doit pas commencer par 0" required>
+                </div>
+                <div class="form-group">
+                    <label for="pass">Mot de passe :</label>
+                    <input type="password" id="pass" name="pass" pattern="^(?=.*[A-Z])(?=.*\s)(?=.*[0-9a-zA-Z]).{8,}$" title="Le mot de passe doit contenir au moins 8 caractères, une lettre majuscule, un espace" required>
+                </div>
+                <div class="form-group">
+                    <div class="password-container" >
+                        <input type="checkbox" onclick="myFunction()">
+                        <span>Afficher le mot de passe</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date">Sélectionnez une date :</label><br>
+                    <input type="date" id="date" name="date" required><br><br>
+                </div> 
+                <div class="form-group">
+                <button type="submit" name="submit">Soumettre</button>
+                </div>
+            </form>
+            
+        </div>
+    </main>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const errorsParam = urlParams.get('errors');
+            console.log("Errors param:", errorsParam); // Vérifiez si les erreurs sont détectées correctement
+            if (errorsParam) {
+                const errors = errorsParam.split("&");
+                let errorMessage = "";
+                errors.forEach(error => {
+                    errorMessage += `${error}\n`;
+                });
+                console.log("Error message:", errorMessage); // Vérifiez si le message d'erreur est construit correctement
+                
+                Swal.fire({
+                    icon: "error",
+                    title: "erreur",
+                    text: errorMessage,
+                    });
+                }
+                
+            }
+    </script>
+</body>
+</html>
